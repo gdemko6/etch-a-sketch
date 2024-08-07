@@ -27,7 +27,14 @@ function createBoxes(boxAmount){
 
 function changeColor(){
    this.style.border = "1px solid red";
-   this.style.backgroundColor = "black";
+   let randNum1 = rgbNum();
+   let randNum2 = rgbNum();
+   let randNum3 = rgbNum();
+   this.style.backgroundColor = "rgb("+randNum1+","+randNum2+","+randNum3+")";
+}
+
+function rgbNum(){
+    return Math.floor(Math.random() * 256);
 }
 
 //button functionality
